@@ -1,0 +1,106 @@
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    /* Centers vertically */
+    justify-content: center;
+    /* Centers horizontally */
+}
+
+.letter {
+    text-align: center;
+    /* Centers the text inside */
+    display: inline-block;
+    line-height: 1;
+    /* Adjust if necessary for perfect centering */
+}
+
+#logo {
+    margin-right: 10px;
+    /* Adds spacing between the logo and the text */
+}
+
+#welcome {
+    display: flex;
+    align-items: center;
+    /* Vertically center emoji and text */
+    justify-content: center;
+    gap: 5px;
+    /* Adds spacing between letters */
+}
+
+/* Reset styles to avoid conflicts */
+.navbar-text {
+    color: inherit;
+    /* Use inherited color from parent */
+    transition: color 0.3s;
+    /* Smooth transition */
+    cursor: pointer;
+}
+
+/* Hover effect for individual letters */
+.navbar-text.S:hover,
+.navbar-text.P:hover,
+.navbar-text.E:hover,
+.navbar-text.N:hover,
+.navbar-text.D:hover,
+.navbar-text.C:hover,
+.navbar-text.W:hover,
+.navbar-text.E:hover,
+.navbar-text.L:hover,
+.navbar-text.O:hover,
+.navbar-text.M:hover,
+.navbar-text.EX:hover {
+    color: #FFFFFF !important;
+    text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 15px #00FFFF;
+}
+
+#logo {
+    transition: box-shadow 0.3s ease;
+}
+
+#logo:hover {
+    box-shadow: 0 0 2px #00FFFF, 0 0 4px #00FFFF, 0 0 6px #00FFFF, 0 0 8px #00FFFF;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+@media (max-width: 576px) {
+    #welcome {
+        display: none;
+    }
+}
+
+@media (max-width: 300px) {
+    .navbar-brand {
+        display: flex;
+        flex-direction: row;
+        /* Keep logo and text in the same line */
+        align-items: center;
+        /* Vertically center the content */
+        justify-content: center;
+        /* Horizontally center the content */
+        width: 100%;
+        /* Ensure full-width container */
+        text-align: center;
+        gap: 10px;
+        /* Add spacing between logo and text */
+    }
+
+    #logo {
+        margin: 0;
+        /* Remove unnecessary margins */
+        width: 50px;
+        /* Adjust size of the logo for smaller screens */
+    }
+
+    .letter {
+        margin: 0;
+        /* Adjust letter spacing if needed */
+        font-size: 1rem;
+        /* Scale down font size if needed */
+    }
+}
