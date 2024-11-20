@@ -5,7 +5,9 @@ function update() {
     if (naam.trim() === "" && tarik.trim() === "" && paise.trim() === "") {
         console.log("Please enter the fields, thry are empty!!");
     }
-    else {
+    else if(isNaN(paise)|| paise.trim() === ""){
+        console.log("Not a valid entry")}
+    else{
         console.log("Updating data")
         if (localStorage.getItem('expenseJson') == null) {
             expenseJsonArray = [];
